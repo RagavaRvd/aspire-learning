@@ -7,26 +7,17 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FeedComponent } from './feed/feed.component';
 import { UserService } from './services/user.service';
-import { AuthUser } from './services/authuser.service';
+import { AuthService } from './services/authuser.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ProfileComponent,
-    FeedComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, HomeComponent, ProfileComponent, FeedComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [
     {
-      provide:UserService,
-      // useClass:AuthUser
-      useClass:UserService
-    }
+      provide: UserService,
+      useClass: UserService,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
