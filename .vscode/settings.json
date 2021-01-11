@@ -1,0 +1,6 @@
+{
+    "editor.fontFamily": "Courier New, monospace",
+    "terminal.integrated.allowMnemonics": true,
+    "smoothtype.duration": 1200,
+    "editor.formatOnSave": true
+}

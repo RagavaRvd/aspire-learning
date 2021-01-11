@@ -1,0 +1,11 @@
+<article class="widget" *ngIf="weather">
+  <div class="weatherIcon"><i class="wi wi-day-cloudy"></i></div>
+  <div class="weatherInfo">
+    <div class="temperature"><span>{{(weather?.main?.temp -273.15)}}&deg;</span></div>
+    <div class="description">
+      <div class="weatherCondition">{{weather.weather[0].main}}</div>
+      <div class="place">{{weather.name}},{{weather?.sys.country}}</div>
+    </div>
+  </div>
+  <div class="date">1st Jan</div>
+</article>
